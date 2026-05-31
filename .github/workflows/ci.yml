@@ -1,0 +1,26 @@
+name: CI Pipeline Web Hotel
+
+# Kapan robot ini harus bekerja? (Setiap ada kode baru yang di-push ke branch utama)
+on:
+  push:
+    branches:
+      - main
+      - master
+
+# Apa tugas si robot?
+jobs:
+  tes-build-docker:
+    runs-on: ubuntu-latest # Robot akan meminjam server Ubuntu gratis dari GitHub
+
+    steps:
+      # Langkah 1: Kloning kode dari repositori ke dalam server robot
+      - name: Ambil Kode (Checkout)
+        uses: actions/checkout@v3
+
+      # Langkah 2: Memastikan Docker sudah siap (biasanya sudah ada di ubuntu-latest)
+      - name: Setup Docker
+        uses: docker/setup-buildx-action@v2
+
+      # Langkah 3: Tes masak (build) resep Dockerfile kita
+      - name: Tes Build Docker Image
+        run: docker build -t web-perdana-test:latest .

@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f4f4; color: #333; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+nav .logo { font-size: 24px; font-weight: bold; color: #2c3e50; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+.hero { height: 80vh; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.booking-form { background: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 8px; display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center;}
+.booking-form input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; outline: none; }
+.booking-form button { padding: 10px 20px; background-color: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+.booking-form button:hover { background-color: #c0392b; }
